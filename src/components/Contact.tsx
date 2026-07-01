@@ -9,13 +9,13 @@ const Contact = () => {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 items-center">
         
         {/* Intro */}
-        <div className="flex items-start gap-4 lg:col-span-1">
-          <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-            <Mail className="w-5 h-5 text-viz-orange" />
+        <div className="flex items-center gap-6 lg:col-span-1">
+          <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+            <Mail className="w-6 h-6 text-viz-orange" />
           </div>
           <div>
-            <h3 className="text-white font-bold text-lg mb-1">Have questions?</h3>
-            <p className="text-gray-400 text-sm">We'd love to <span className="text-viz-orange font-medium">hear from you.</span></p>
+            <h3 className="text-white/70 font-medium text-sm mb-1">Have questions?</h3>
+            <p className="text-white text-lg font-bold">We'd love to <span className="text-viz-orange">hear from you.</span></p>
           </div>
         </div>
 

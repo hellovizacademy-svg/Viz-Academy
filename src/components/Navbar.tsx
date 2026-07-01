@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Triangle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,11 +29,19 @@ const Navbar = () => {
       <div className="max-w-[1280px] mx-auto px-6 w-full flex justify-between items-center">
         
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <Triangle className="text-viz-orange w-8 h-8 fill-viz-orange rotate-180" />
+        <div className="flex items-center gap-3 cursor-pointer">
+          <div className="flex flex-col gap-[2px]">
+             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L20 8L8 11L22 17L10 20L14 24" stroke="#ff5a1f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+             </svg>
+          </div>
           <div className="flex flex-col">
-            <span className="font-bold text-2xl leading-none tracking-widest">VIZ</span>
-            <span className="text-[10px] tracking-[0.3em] text-viz-orange font-semibold">ACADEMY</span>
+            <span className="font-bold text-3xl leading-none tracking-[0.2em] text-white">VIZ</span>
+            <span className="text-[9px] tracking-[0.4em] text-viz-orange font-semibold flex items-center justify-center gap-1 mt-1">
+              <span className="w-2 h-[1px] bg-viz-orange"></span>
+              ACADEMY
+              <span className="w-2 h-[1px] bg-viz-orange"></span>
+            </span>
           </div>
         </div>
 

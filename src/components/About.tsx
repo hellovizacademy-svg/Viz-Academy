@@ -44,15 +44,18 @@ const About = () => {
         </div>
 
         {/* Right Column - Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 animate-fade-up delay-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 animate-fade-up delay-200">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col gap-4 group">
-              <div className="w-16 h-16 rounded-2xl bg-viz-orange/10 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2 group-hover:bg-viz-orange/20">
+            <div 
+              key={index} 
+              className={`flex gap-6 p-8 group ${index === 0 ? 'sm:border-b sm:border-r border-gray-100' : index === 1 ? 'sm:border-b border-gray-100' : index === 2 ? 'sm:border-r border-gray-100' : ''}`}
+            >
+              <div className="w-12 h-12 shrink-0 rounded-full border border-viz-orange/30 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 bg-white">
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-xl font-bold text-viz-black mb-2">{feature.title}</h3>
-                <p className="text-viz-gray text-base">{feature.desc}</p>
+                <h3 className="text-lg font-bold text-viz-black mb-1">{feature.title}</h3>
+                <p className="text-viz-gray text-sm leading-relaxed">{feature.desc}</p>
               </div>
             </div>
           ))}
